@@ -1,13 +1,10 @@
-apiVersion: grafana.integreatly.org/v1beta1
+apiVersion: integreatly.org/v1alpha1
 kind: GrafanaDataSource
 metadata:
   name: prometheus-grafanadatasource
 spec:
-  instanceSelector:
-    matchLabels:
-      dashboards: grafana
   datasource:
-      access: proxy
+    - access: proxy
       editable: true
       isDefault: true
       jsonData:
